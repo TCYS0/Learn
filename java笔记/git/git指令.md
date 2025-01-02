@@ -30,8 +30,6 @@ git config --global user.email "briup@qq.com"
 git config [--local|--global|--system] --unset section.ke
 ```
 
-​	
-
 ## 项目操作
 
 ```shell
@@ -47,7 +45,11 @@ git init [project-name]
 
 # 克隆一个远程仓库到本地
 git clone [url]
+```
 
+## 文件操作
+
+```shell
 # 查看指定文件状态
 git status [filename]
 
@@ -80,12 +82,22 @@ git reset HEAD readme.txt
 
 # 查看操作日志，可以查看提交的用户、时间及提交信息
 git log
+```
 
+## 仓库操作
+
+```shell
 #查看远程仓库
 git remote -v
 
 #添加远程仓库
-git remote add origin [url]
+git remote add origin url
+
+#修改远程仓库
+git remote set-url origin url
+
+#删除远程仓库
+git remote remove origin
 
 #推送给远程仓库
 git push -u origin master
@@ -99,6 +111,8 @@ git pull
 #也可以在本地修改文件内容，提交并推送给远程仓库：
 git add . && git commit -m 'modify readme' && git push
 ```
+
+
 
 ## 分支操作
 
